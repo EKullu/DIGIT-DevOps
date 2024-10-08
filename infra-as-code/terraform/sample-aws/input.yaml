@@ -1,26 +1,26 @@
 # Replace with the name which you want to give to your EKS cluster
 # Cluster name can have only lowercase alphanumeric characters and hyphens
 # For example: "digit-demos"
-cluster_name: "dev-piramal"
+cluster_name: "naruto"
 
 # Replace with ssh key name you want
-ssh_key_name: "piramal-ssh-key" 
+ssh_key_name: "naruto-ssh-key" 
 
 # Replace with public key which you want to add in your EC2 machines # ssh key which you want to add in your EC2 machine
 public_ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoN3nouZLx3PVMu1TKPYu18AAOfl+J4Y9gHrEtqbh+PoBgbVefEewxrRF6C1N/35SehgVLAawLnGJOhikrx3qjXg4dX/KQ0Vz53FjjagNfk1Elaw/wtI+TOoXfJ0O6F+v2sr74SZ2d0oZvwQqIdFK9WIpJ6F4U7giZlMckfA1uulYX/f2i4kZ/vNiatO1RVrB5XWXSDPntOSSSwGBHkig7kOkhRwvYwgnVXrj9//KbPn7Y7Q8WZCx74l28i9Hg1OT9bZVKUM/dQVrEStnR0dCMnKInX+hdX8l1T2O68mEmODRrMv1sjcTq27JdoFNyWmpoRz7WaR9ErB/UeOqD/GRF"
 
 # Name you want to give to your Database
 # DB name must contain only alphanumeric characters
-db_name: "piramaldevdb"
+db_name: "narutodb"
 
 # Replace with DB username you want
 # DB user name must contain only alphanumeric characters
-db_username: "devpiramal" 
+db_username: "naruto" 
 
 # Replace with Domain name you want for your web applications
-domain_name: "devpiramal.tekdinext.com"
+domain_name: "naruto.nextanime.com"
 
 # Replace with the name you want to give to your S3 bucket which is used to store the terraform state
-terraform_state_bucket_name: "dev-piramal-s3-bucket"
+terraform_state_bucket_name: "naruto-s3-bucket"
 
 

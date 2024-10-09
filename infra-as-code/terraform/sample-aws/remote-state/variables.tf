@@ -1,3 +1,3 @@
 variable "bucket_name" {
-  default = "dev-piramal-s3-bucket"
+  default = "naruto-s3-bucket"
 }

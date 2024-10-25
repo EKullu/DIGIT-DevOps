@@ -213,6 +213,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Checkout Universal Benefits code
+        uses: actions/checkout@v4
+        with:
+          path: Universal_Benefits
+          repository: PSMRI/Universal_Benefits
+      - name: Log in to Docker Hub
+        run: >-
+         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{
+         secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Build Docker image
+        run: |
+         cd Universal_Benefits
+         docker build -t your-docker-image-name:latest .
+      - name: Push Docker image
+        run: |
+         docker push your-docker-image-name:latest
       - name: Download infra-as-code folder from artifacts
         uses: actions/download-artifact@v4
         with:

@@ -21,6 +21,12 @@ releases:
   installed: true
   <<: *default
 
+- name: benefits
+  installed: true
+  <<: *default
+
+  
+
 
 
 

@@ -148,6 +148,7 @@ configmaps:
       uba-application-host: "http://application.egov:8080/"
       health-project: 'http://health-project.health:8080/'
       health-individual: 'http://health-individual.health:8080/'
+      uba-benefits-host: "http://benefits.egov:8080/"
 
 root-ingress:
   name: root-ingress

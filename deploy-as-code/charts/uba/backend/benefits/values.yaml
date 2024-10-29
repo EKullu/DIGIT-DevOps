@@ -12,13 +12,13 @@ ingress:
   context: "benefits"
 
 # Init Containers Configs
-# initContainers:
-#   dbMigration:
-#     enabled: true
-#     schemaTable: "benefits_schema"
-#     image:
-#       repository: "prsm323/benefits-db"
-#       tag: latest
+initContainers:
+  dbMigration:
+    enabled: true
+    schemaTable: "benefits_schema"
+    image:
+      repository: "prsm323/benefits-db"
+      tag: latest
 
 # Container Configs
 image:

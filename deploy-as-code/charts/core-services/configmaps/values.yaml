@@ -149,7 +149,7 @@ configmaps:
       health-project: 'http://health-project.health:8080/'
       health-individual: 'http://health-individual.health:8080/'
       uba-benefits-host: "http://benefits.egov:8080/"
-      uba-benefits-host: "http://customer.egov:8080/"
+      uba-customer-host: "http://customer.egov:8080/"
 
 root-ingress:
   name: root-ingress

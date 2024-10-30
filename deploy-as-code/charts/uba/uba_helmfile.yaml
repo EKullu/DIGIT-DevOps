@@ -25,6 +25,9 @@ releases:
   installed: true
   <<: *default
 
+- name: customer
+  installed: true
+  <<: *default
   
 
 

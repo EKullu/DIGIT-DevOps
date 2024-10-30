@@ -48,9 +48,9 @@ env: |
     value: "true" 
   {{- end }}
   - name: SERVER_CONTEXT_PATH
-    value: /benefits
+    value: /customer
   - name: SERVER_SERVLET_CONTEXT-PATH
-    value: /benefits 
+    value: /customer 
   - name: EGOV_MDMS_HOST
     valueFrom:
       configMapKeyRef:

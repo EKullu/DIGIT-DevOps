@@ -29,9 +29,8 @@ releases:
   installed: true
   <<: *default
 
-- name: uba
+- name: uba-ui
   installed: true
-  chart: ./frontend/uba
   <<: *default
   
 

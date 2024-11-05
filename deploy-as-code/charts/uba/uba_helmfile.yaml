@@ -31,6 +31,7 @@ releases:
 
 - name: uba
   installed: true
+  chart: ./frontend/uba
   <<: *default
   
 

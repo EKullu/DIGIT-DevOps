@@ -28,6 +28,10 @@ releases:
 - name: customer
   installed: true
   <<: *default
+
+  - name: uba
+  installed: true
+  <<: *default
   
 
 

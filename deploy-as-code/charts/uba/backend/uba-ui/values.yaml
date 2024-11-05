@@ -25,10 +25,10 @@ healthChecks:
   readinessProbePath: "/uba-ui/"
 
 extraVolumes: |
-  - name: uba-ui-files
+  - name: uba-ui
     configMap:
-      name: uba-ui-configmap
+      name: uba-ui
 
 extraVolumeMounts: |
-  - mountPath: /usr/share/nginx/html/uba-ui
-    name: uba-ui-files
+  - mountPath: /usr/share/nginx/html
+    name: uba-ui

@@ -4,7 +4,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Chart.Name }}-js-injection
+  name: {{ .Chart.Name }}
   namespace: {{ .Values.namespace }}
 data: 
 {{- index .Values "custom-js-injection" | nindent 2 }}

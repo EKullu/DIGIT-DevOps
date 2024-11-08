@@ -183,6 +183,7 @@ transportPort: 9300
 
 secret:
   enabled: true
+  password: 8fwbD6HbJh6HU0oddsHm8TEI
 
 service:
   labels: {}

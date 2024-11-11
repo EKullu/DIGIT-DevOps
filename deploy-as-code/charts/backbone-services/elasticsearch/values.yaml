@@ -109,8 +109,10 @@ volumeClaimTemplate:
   accessModes: [ "ReadWriteOnce" ]
   resources:
     requests:
-      storage: 2Gi
-  storageClassName: gp2
+      storage: 25Gi
+  storageClassName: gp2  # Use 'gp2' (or any other StorageClass like 'fast-storage') for EBS volumes
+
+
 rbac:
   create: false
   serviceAccountName: ""

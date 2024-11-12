@@ -153,13 +153,13 @@ ingress:
     nginx.ingress.kubernetes.io/lua-resty-waf-score-threshold: "10"
     nginx.ingress.kubernetes.io/use-regex: "true"
   hosts:
-    - host: demo.digit.org
+    - host: devpiramal.tekdinext.com
       paths:
         - path: /kibana
   tls: 
-   - secretName: demo.digit.org-tls-certs
+   - secretName: devpiramal.tekdinext.com-tls-certs
      hosts:
-       - demo.digit.org
+       - devpiramal.tekdinext.com
 
 readinessProbe:
   failureThreshold: 3

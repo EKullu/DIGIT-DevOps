@@ -23,7 +23,7 @@ initContainers:
 # Container Configs
 image:
   repository: "prsm323/benefits"
-  tag: latest2
+  tag: latest3
 replicas: "1"
 healthChecks:
   enabled: true

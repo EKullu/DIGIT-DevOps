@@ -13,7 +13,6 @@ global:
   imagePullSecrets: []
   ## @param global.storageClass Global StorageClass for Persistent Volume(s)
   ##
-  storageClass: ""
   storageClass: "gp2"
   postgresql:
     ## @param global.postgresql.auth.postgresPassword Password for the "postgres" admin user (overrides `auth.postgresPassword`)

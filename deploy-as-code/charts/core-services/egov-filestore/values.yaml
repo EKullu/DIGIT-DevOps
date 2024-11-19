@@ -29,7 +29,7 @@ healthChecks:
 appType: "java-spring"
 tracing-enabled: true
 is-bucket-fixed: "true"
-fixed-bucketname: "unified-dev-bucket-s3"
+fixed-bucketname: "dev-piramal-s3-bucket"
 heap: "-Xmx192m -Xms192m"
 file-storage-mount-path: "/filestore"
 is-nfs-enabled: false

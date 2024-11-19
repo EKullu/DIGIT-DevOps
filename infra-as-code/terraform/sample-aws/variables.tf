@@ -69,7 +69,7 @@ variable "public_key" {
   description = "ssh key"
 }
 
-## change ssh key_name eg. digit-quickstart_your-name
+## change ssh key_name eg. digit-quickstart_your-name 
 
 
 

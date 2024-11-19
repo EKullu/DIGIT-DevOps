@@ -41,6 +41,11 @@ resource "aws_iam_role_policy_attachment" "worker_nodes_AmazonEC2ContainerRegist
   role       = "${aws_iam_role.ec2_iam.name}"
 }
 
+resource "aws_iam_role_policy_attachment" "worker_nodes_AmazonECSInfrastructureRolePolicyForVolumes" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForVolumes"
+  role       = "${aws_iam_role.ec2_iam.name}"
+}
+
 resource "aws_iam_instance_profile" "worker_nodes" {
   name = "${var.cluster_name}"
   role = "${aws_iam_role.ec2_iam.name}"

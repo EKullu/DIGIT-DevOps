@@ -179,5 +179,8 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   addon_name                      = "aws-ebs-csi-driver"
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
+  # Optional: specify the latest version of the EBS CSI Driver
+  addon_version                   = "v1.37.0-eksbuild.1"  # Replace with the latest version if necessary
 }
+
 

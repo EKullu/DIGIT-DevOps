@@ -8,8 +8,10 @@ repositories:
 
 values:
   - namespace: monitoring
-  - ../environments/env.yaml
-  - ../environments/env-secrets.yaml
+  # - ../environments/env.yaml
+  # - ../environments/env-secrets.yaml
+  - ../environments/staging-env-secrets.yaml
+  - ../environments/staging-env.yaml
 
 
 

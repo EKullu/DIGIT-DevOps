@@ -2,13 +2,13 @@
 # Common Labels
 labels:
   app: "disbursal"
-  group: "digit-works"
+  group: "uba"
 
 namespace: works
 
 # Ingress Configs
 ingress:
-  namespace: egov
+  namespace: uba
   enabled: true
   zuul: true
   context: "disbursal"

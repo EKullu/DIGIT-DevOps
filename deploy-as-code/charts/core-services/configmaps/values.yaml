@@ -6,13 +6,13 @@ configmaps:
       # db-host: "postgresql.backbone:5432" ## Add db-host name eg: egov-demo.database.azure.com
       # db-name: "postgres" ## Add db-name
       # db-url: "jdbc:postgresql://postgresql.backbone:5432/postgres" ## example: jdbc:postgresql://egov-demo.postgres.database.azure.com:5432/egov_demo
-      db-host: dev-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
-      db-name: piramaldevdb ## Add db-name
-      db-url: "jdbc:postgresql://dev-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/piramaldevdb"
-      domain: "devpiramal.tekdinext.com" ## Add your Domain Name
-      egov-services-fqdn-name: "https://devpiramal.tekdinext.com/" ## Add your Domain Name
-      flywayUsername: devpiramal
-      flywayPassword: devpiramal1234  
+      db-host: staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
+      db-name: piramalstagingdb ## Add db-name
+      db-url: "jdbc:postgresql://staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/piramalstagingdb"
+      domain: "stagingpiramal.tekdinext.com" ## Add your Domain Name
+      egov-services-fqdn-name: "https://stagingpiramal.tekdinext.com/" ## Add your Domain Name
+      flywayUsername: stagingpiramal
+      flywayPassword: stagingpiramal1234  
       egov-state-level-tenant-id: "pg" 
       s3-assets-bucket: "(pg-egov-assets|egov-playground-assets)"
       es-host: "elasticsearch-data-v1.es-cluster"

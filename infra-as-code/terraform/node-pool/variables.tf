@@ -8,7 +8,7 @@ variable "instance_types" {
 }
 
 variable "kubernetes_version" {
-  default = "1.20"
+  default = "1.31"
 }
 
 variable "availability_zones" {

@@ -1,9 +1,9 @@
 # Common Labels
 labels:
   app: "benefits"
-  group: "egov"
+  group: "uba"
 
-namespace: egov
+namespace: uba
 
 # Ingress Configs
 ingress:

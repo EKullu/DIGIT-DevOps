@@ -160,18 +160,49 @@ resource "aws_security_group_rule" "rds_db_ingress_workers" {
   type                     = "ingress"
 }
 
+# resource "aws_eks_addon" "kube_proxy" {
+#   cluster_name                    = data.aws_eks_cluster.cluster.name
+#   addon_name                      = "kube-proxy"
+#   resolve_conflicts_on_create     = "OVERWRITE"
+#   resolve_conflicts_on_update      = "OVERWRITE"
+#   # Optional: specify the latest version of the EBS CSI Driver
+#   addon_version                   = "v1.37.0-eksbuild.1"  # Replace with the latest version if necessary
+# }
+
+# Fetch the latest available version of the "kube-proxy" addon from EKS
+data "aws_eks_addon_versions" "kube_proxy" {
+  cluster_name = data.aws_eks_cluster.cluster.name
+  addon_name   = "kube-proxy"
+}
+
 resource "aws_eks_addon" "kube_proxy" {
   cluster_name                    = data.aws_eks_cluster.cluster.name
   addon_name                      = "kube-proxy"
   resolve_conflicts_on_create     = "OVERWRITE"
-  resolve_conflicts_on_update      = "OVERWRITE"
+  resolve_conflicts_on_update     = "OVERWRITE"
+  
+  # Use the latest available version dynamically
+  addon_version                   = data.aws_eks_addon_versions.kube_proxy.latest_addon_version
 }
+
+data "aws_eks_addon_versions" "core_dns" {
+  cluster_name = data.aws_eks_cluster.cluster.name
+  addon_name   = "coredns"
+}
+
 
 resource "aws_eks_addon" "core_dns" {
   cluster_name                    = data.aws_eks_cluster.cluster.name
   addon_name                      = "coredns"
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
+  # Optional: specify the latest version of the EBS CSI Driver
+  addon_version                   = data.aws_eks_addon_versions.kube_proxy.latest_addon_version
+}
+
+data "aws_eks_addon_versions" "aws_ebs_csi_driver" {
+  cluster_name = data.aws_eks_cluster.cluster.name
+  addon_name   = "aws-ebs-csi-driver"
 }
 
 resource "aws_eks_addon" "aws_ebs_csi_driver" {
@@ -180,7 +211,7 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
   # Optional: specify the latest version of the EBS CSI Driver
-  addon_version                   = "v1.37.0-eksbuild.1"  # Replace with the latest version if necessary
+  addon_version                   = data.aws_eks_addon_versions.kube_proxy.latest_addon_version
 }
 
 

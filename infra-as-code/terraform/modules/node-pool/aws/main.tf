@@ -32,6 +32,11 @@ resource "aws_iam_role_policy_attachment" "worker_nodes_AmazonEC2ContainerRegist
   role       = "${aws_iam_role.ec2_iam.name}"
 }
 
+resource "aws_iam_role_policy_attachment" "worker_nodes_AmazonECSInfrastructureRolePolicyForVolumes" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonECSInfrastructureRolePolicyForVolumes"
+  role       = "${aws_iam_role.ec2_iam.name}"
+}
+
 data "aws_ami" "eks_worker" {
   filter {
     name   = "name"
@@ -119,6 +124,7 @@ resource "aws_eks_node_group" "ng" {
     aws_iam_role_policy_attachment.worker_nodes_AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.worker_nodes_AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.worker_nodes_AmazonEC2ContainerRegistryReadOnly,
+    aws_iam_role_policy_attachment.worker_nodes_AmazonECSInfrastructureRolePolicyForVolumes,
   ]
 }
 

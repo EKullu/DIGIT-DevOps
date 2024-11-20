@@ -11,7 +11,7 @@ configmaps:
       db-url: "jdbc:postgresql://staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/piramalstagingdb"
       domain: "stagingpiramal.tekdinext.com" ## Add your Domain Name
       egov-services-fqdn-name: "https://stagingpiramal.tekdinext.com/" ## Add your Domain Name
-      flywayUsername: staging
+      flywayUsername: stagingpiramal
       flywayPassword: staging12345  
       egov-state-level-tenant-id: "pg" 
       s3-assets-bucket: "(pg-egov-assets|egov-playground-assets)"

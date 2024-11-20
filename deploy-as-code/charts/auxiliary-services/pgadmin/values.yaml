@@ -21,8 +21,8 @@ image:
 replicas: "1"
 httpPort: 8080
 serverBasePath: "/pgadmin"
-dbUrl: "staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com"
-environment: "Staging"
+dbUrl: "egov-dev-db.ctm6jbmr5mnj.ap-south-1.rds.amazonaws.com"
+environment: "DEV"
 maintenance-db-name: "postgres"           
 
 # Additional Container Envs

@@ -145,11 +145,11 @@ configmaps:
       egov-pdf: "http://egov-pdf.egov:8080/"
       egov-user-event: "http://egov-user-event.egov:8080/"
       mdms-service-v2: "http://mdms-v2.egov:8080/"
-      uba-application-host: "http://application.egov:8080/"
+      uba-application: "http://application.egov:8080/"
       health-project: 'http://health-project.health:8080/'
       health-individual: 'http://health-individual.health:8080/'
-      uba-benefits-host: "http://benefits.egov:8080/"
-      uba-customer-host: "http://customer.egov:8080/"
+      uba-benefits: "http://benefits.egov:8080/"
+      uba-customer: "http://customer.egov:8080/"
       uba-ui: "http://uba-ui.egov:80/"
 
 root-ingress:
@@ -190,3 +190,14 @@ secrets:
   egov-pg-service:
     name: egov-pg-service
     namespace: egov
+  uba-application:
+    name: application
+    namespace: uba
+  uba-benefits:
+    name: benefits
+    namespace: uba
+  uba-customer:
+    name: customer
+    namespace: uba
+
+

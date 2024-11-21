@@ -13,8 +13,8 @@ initContainers: {}
 
 # Container Configs
 image:
-  repository: "ttpldevops/uba-ui"
-  tag: latest
+  repository: "ttpldevops/frontenduba"
+  tag: v2
 replicas: "1"
 httpPort: 80
 healthChecks:

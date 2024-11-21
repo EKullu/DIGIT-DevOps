@@ -190,14 +190,5 @@ secrets:
   egov-pg-service:
     name: egov-pg-service
     namespace: egov
-  uba-application:
-    name: application
-    namespace: uba
-  uba-benefits:
-    name: benefits
-    namespace: uba
-  uba-customer:
-    name: customer
-    namespace: uba
 
 

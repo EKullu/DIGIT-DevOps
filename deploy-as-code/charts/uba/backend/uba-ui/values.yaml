@@ -14,7 +14,7 @@ initContainers: {}
 # Container Configs
 image:
   repository: "ttpldevops/frontenduba"
-  tag: v2
+  tag: v3
 replicas: "1"
 httpPort: 80
 healthChecks:

@@ -14,7 +14,7 @@ initContainers: {}
 # Container Configs
 image:
   repository: "ttpldevops/uba-ui"
-  tag: v0.0.2
+  tag: v0.0.3
 replicas: "1"
 httpPort: 80
 healthChecks:

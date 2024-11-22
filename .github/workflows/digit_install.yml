@@ -118,7 +118,7 @@ jobs:
         run: sudo apt-get install -y jq
       - name: Convert YAML to JSON
         run: |
-          cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -j - > secrets.json
+          cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -o=json - > secrets.json
       - name: Extract dbPassword
         id: extract
         run: |
@@ -237,7 +237,7 @@ jobs:
         run: sudo apt-get install -y jq
       - name: Convert YAML to JSON
         run: |
-          cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -j - > secrets.json
+          cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -o=json - > secrets.json
       - name: Extract flywayPassword
         id: extract
         run: |
@@ -345,7 +345,7 @@ jobs:
   #       run: sudo apt-get install -y jq
   #     - name: Convert YAML to JSON
   #       run: |
-  #         cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -j - > secrets.json
+  #         cat deploy-as-code/charts/environments/env-secrets.yaml | yq e -o=json - > secrets.json
   #     - name: Extract flywayPassword
   #       id: extract
   #       run: |

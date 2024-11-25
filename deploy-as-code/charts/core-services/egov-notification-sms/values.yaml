@@ -23,7 +23,7 @@ sms-gateway-to-use: "AIRTEL"
 #sms-provider-url: "https://openapi.airtel.in/gateway/airtel-iq-sms-utility/sendSingleSms"
 sms.provider.requestType: "POST"
 sms.provider.contentType: "application/json"
-sms.provider.class: "AIRTEL"
+sms.provider.class: "Airtel"
 sms.verify.response: true
 sms.print.response: false
 sms.success.codes: "200,201,202"

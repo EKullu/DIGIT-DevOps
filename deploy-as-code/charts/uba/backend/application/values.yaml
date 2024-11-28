@@ -23,7 +23,7 @@ initContainers:
 # Container Configs
 image:
   repository: "prsm323/application"
-  tag: latest9
+  tag: latest10
 replicas: "1"
 healthChecks:
   enabled: true

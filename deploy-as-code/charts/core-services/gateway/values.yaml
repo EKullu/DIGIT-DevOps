@@ -1,3 +1,4 @@
+
 # Common Labels
 labels:
   app: "gateway"
@@ -151,4 +152,3 @@ env: |
   {{- end }}
   - name: SPRING_DATA_REDIS_HOST     
     value: "redis.backbone"
-

@@ -14,7 +14,7 @@ initContainers: {}
 # Container Configs
 image:
   repository: "ttpldevops/uba-ui"
-  tag: dev
+  tag: uat
   pullPolicy: "Always"
 replicas: "1"
 httpPort: 80

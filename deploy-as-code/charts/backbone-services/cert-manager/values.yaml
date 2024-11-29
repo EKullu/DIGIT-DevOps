@@ -76,7 +76,7 @@ clusterIssuer:
   #     server: https://acme-staging-v02.api.letsencrypt.org/directory 
   #     email: sre-staff@egovernments.org
   #     secretName: letsencrypt-staging
-  # staging:
+  staging:
     name: letsencrypt-staging
     acme:
       server: https://acme-v02.api.letsencrypt.org/directory 

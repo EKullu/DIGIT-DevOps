@@ -166,7 +166,7 @@ resource "aws_eks_addon" "kube_proxy" {
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
   # Optional: specify the latest version of the EBS CSI Driver
-  addon_version                   = "v1.31.1-eksbuild.2"  # Replace with the latest version if necessary
+#   addon_version                   = "v1.31.1-eksbuild.2"  # Replace with the latest version if necessary
 }
 
 resource "aws_eks_addon" "core_dns" {
@@ -175,7 +175,7 @@ resource "aws_eks_addon" "core_dns" {
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
   # Optional: specify the latest version of the EBS CSI Driver
-  addon_version                   = "v1.11.3-eksbuild.2"  # Replace with the latest version if necessary
+  # addon_version                   = "v1.11.3-eksbuild.2"  # Replace with the latest version if necessary
 }
 
 
@@ -185,7 +185,7 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   resolve_conflicts_on_create     = "OVERWRITE"
   resolve_conflicts_on_update      = "OVERWRITE"
   # Optional: specify the latest version of the EBS CSI Driver
-  addon_version                   = "v1.37.0-eksbuild.1"  # Replace with the latest version if necessary
+  # addon_version                   = "v1.37.0-eksbuild.1"  # Replace with the latest version if necessary
 }
 
 

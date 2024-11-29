@@ -1,7 +1,7 @@
 global:
   domain: stagingpiramal.tekdinext.com
 root-ingress:
-  cert-issuer: "letsencrypt-prod"
+  cert-issuer: "letsencrypt-staging"
 configmaps:
   egov-config:
     data:

@@ -58,18 +58,30 @@ installCRDs: false
 fullnameOverride: "cert-manager"
 
 clusterIssuer:
-  stage:
-    name: letsencrypt-staging
-    acme:
-      server: https://acme-staging-v02.api.letsencrypt.org/directory 
-      email: sre-staff@egovernments.org
-      secretName: letsencrypt-staging
+  # stage:
+  #   name: letsencrypt-staging
+  #   acme:
+  #     server: https://acme-staging-v02.api.letsencrypt.org/directory 
+  #     email: sre-staff@egovernments.org
+  #     secretName: letsencrypt-staging
   prod:
     name: letsencrypt-prod
     acme:
       server: https://acme-v02.api.letsencrypt.org/directory
       email: sre-staff@egovernments.org
       secretName: letsencrypt-prod
+  # dev:
+  #   name: letsencrypt-staging
+  #   acme:
+  #     server: https://acme-staging-v02.api.letsencrypt.org/directory 
+  #     email: sre-staff@egovernments.org
+  #     secretName: letsencrypt-staging
+  # staging:
+    name: letsencrypt-staging
+    acme:
+      server: https://acme-v02.api.letsencrypt.org/directory 
+      email: sre-staff@egovernments.org
+      secretName: letsencrypt-staging
 
 strategy: {}
   # type: RollingUpdate

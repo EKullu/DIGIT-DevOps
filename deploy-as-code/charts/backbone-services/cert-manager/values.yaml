@@ -70,6 +70,13 @@ clusterIssuer:
       server: https://acme-v02.api.letsencrypt.org/directory
       email: sre-staff@egovernments.org
       secretName: letsencrypt-prod
+  dev:
+    name: letsencrypt-dev
+    acme:
+      server: https://acme-v02.api.letsencrypt.org/directory
+      email: sre-staff@egovernments.org
+      secretName: letsencrypt-prod
+  
 
 strategy: {}
   # type: RollingUpdate

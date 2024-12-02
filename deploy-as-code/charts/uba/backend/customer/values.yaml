@@ -65,3 +65,4 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: egov-idgen
+  

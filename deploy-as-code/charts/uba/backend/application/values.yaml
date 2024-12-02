@@ -18,12 +18,12 @@ initContainers:
     schemaTable: "application_schema"
     image:
       repository: "prsm323/application-db"
-      tag: latest
+      tag: latest2
 
 # Container Configs
 image:
   repository: "prsm323/application"
-  tag: latest11
+  tag: latest13
 replicas: "1"
 healthChecks:
   enabled: true
@@ -70,4 +70,5 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: egov-filestore
-
+  
+#ADD 1

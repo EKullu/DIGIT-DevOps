@@ -18,7 +18,7 @@ initContainers:
     schemaTable: "application_schema"
     image:
       repository: "prsm323/application-db"
-      tag: latest2
+      tag: latestrepair2
 
 # Container Configs
 image:

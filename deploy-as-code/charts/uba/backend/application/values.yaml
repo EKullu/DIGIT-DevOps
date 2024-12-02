@@ -18,12 +18,12 @@ initContainers:
     schemaTable: "application_schema"
     image:
       repository: "prsm323/application-db"
-      tag: latest1
+      tag: latestrepair2
 
 # Container Configs
 image:
   repository: "prsm323/application"
-  tag: latest12
+  tag: latest13
 replicas: "1"
 healthChecks:
   enabled: true

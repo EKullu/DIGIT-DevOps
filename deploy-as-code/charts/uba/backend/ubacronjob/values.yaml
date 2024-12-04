@@ -8,7 +8,7 @@ namespace: egov
 # Ingress Configs
 ingress:
   namespace: egov
-  enabled: true
+  enabled: false  # Not needed for a cron job
   zuul: true
   context: "uba-cronjob"
 
@@ -17,52 +17,26 @@ initContainers: {}
 
 # Container Configs
 image:
-  repository: "prsm323/ubacronjob"  # Docker image repository for cron job
-  tag: latest  # Docker image tag (e.g., latest)
+  repository: "prsm323/ubacronjob"  # Your Docker image repository
+  tag: latest  # Ensure this matches your built Docker image tag
 replicas: "1"
 healthChecks:
-  enabled: true
-  livenessProbePath: "/ubacronjob/health"
-  readinessProbePath: "/ubacronjob/health"
+  enabled: false  # Not needed for cron jobs
 memory_limits: 384Mi
 
 # CronJob Schedule Configuration
 cronjob:
-  enabled: true  # Enable the cron job
-  schedule: "*/10 * * * *"  # Schedule to run every 10 minutes (Cron syntax)
+  enabled: true
+  schedule: "*/10 * * * *"  # This will run the cron job every 10 minutes
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: uba-cronjob
-              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-              env:
-                - name: JAVA_OPTS
-                  value: {{ .Values.heap | quote }}
-                - name: JAVA_ARGS
-                  value: {{ .Values.java-args | quote }}
-                {{- if .Values.tracing-enabled }}
-                - name: TRACER_OPENTRACING_ENABLED
-                  value: "true"
-                {{- end }}
-                - name: SERVER_CONTEXT_PATH
-                  value: /uba-cronjob
-                - name: SERVER_SERVLET_CONTEXT_PATH
-                  value: /uba-cronjob
-          restartPolicy: OnFailure  # Restart the cron job pod if it fails
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  # Image from values.yaml
+              env: []
+          restartPolicy: OnFailure  # The job will be retried if it fails
 
-# Additional Container Envs
-env: |
-  - name: JAVA_OPTS
-    value: {{ .Values.heap | quote }}
-  - name: JAVA_ARGS
-    value: {{ .Values.java-args | quote }}
-  {{- if .Values.tracing-enabled }}
-  - name: TRACER_OPENTRACING_ENABLED
-    value: "true"
-  {{- end }}
-  - name: SERVER_CONTEXT_PATH
-    value: /uba-cronjob
-  - name: SERVER_SERVLET_CONTEXT_PATH
-    value: /uba-cronjob
+# Additional Container Envs (if needed)
+env: []

@@ -19,6 +19,7 @@ initContainers: {}
 # Container Configs
 image:
   repository: "prsm323/ubacronjob"
+  tag: latest
 replicas: "1"
 healthChecks:
   enabled: true

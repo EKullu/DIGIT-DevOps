@@ -32,6 +32,12 @@ releases:
 - name: uba-ui
   installed: true
   <<: *default
+
+  
+- name: uba-cronjob
+  installed: true
+  <<: *default
+
   
 
 

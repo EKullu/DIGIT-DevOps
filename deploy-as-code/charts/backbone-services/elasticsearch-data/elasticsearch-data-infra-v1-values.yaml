@@ -1,6 +1,6 @@
 
 name: elasticsearch-data-infra-v1
-replicas: 1
+replicas: 2
 
 image:
   pullPolicy: IfNotPresent  
@@ -21,7 +21,7 @@ roles:
   ingest: "true"
   data: "true"
 
-minimumMasterNodes: 2
+minimumMasterNodes: 3
 
 esMajorVersion: ""
 

@@ -1,6 +1,6 @@
 
 name: elasticsearch-master-infra-v1
-replicas: 2
+replicas: 4
 
 image:
   pullPolicy: IfNotPresent  
@@ -21,7 +21,7 @@ roles:
   ingest: "false"
   data: "false"
 
-minimumMasterNodes: 2
+minimumMasterNodes: 3
 
 esMajorVersion: ""
 
@@ -82,7 +82,7 @@ resources:
   requests:
     memory: "896Mi"
   limits:
-    memory: "896Mi"  
+    memory: "2Gi"  
 
 initResources: {}
   # limits:

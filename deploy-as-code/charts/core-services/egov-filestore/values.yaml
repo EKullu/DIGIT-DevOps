@@ -21,7 +21,7 @@ ingress:
 image:
   repository: "egov-filestore"
   tag: DIGIT-2.9-LTS-237578ce80-14 
-replicas: "1"
+replicas: "2"
 healthChecks:
   enabled: true
   livenessProbePath: "/filestore/health"

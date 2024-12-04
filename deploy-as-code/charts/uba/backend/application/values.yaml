@@ -24,7 +24,7 @@ initContainers:
 image:
   repository: "prsm323/application"
   tag: latest18
-replicas: "1"
+replicas: "4"
 healthChecks:
   enabled: true
   livenessProbePath: "/application/health"
@@ -32,7 +32,7 @@ healthChecks:
 appType: "java-spring"
 tracing-enabled: true
 heap: "-Xmx256m -Xms256m"
-memory_limits: 384Mi
+memory_limits: 1Gi
 java-args: ""
 
 # Additional Container Envs

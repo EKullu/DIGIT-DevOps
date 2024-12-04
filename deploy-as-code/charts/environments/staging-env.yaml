@@ -57,7 +57,7 @@ egov-url-shortening:
   hashids-min-length: "2"
   
 egov-filestore:
-  memory_limits: "512Mi" 
+  memory_limits: "1Gi" 
   volume: /opt/eGov/filestore
   is-bucket-fixed: "true"
   minio.url : "http://minio.backbone:9000/"
@@ -117,7 +117,7 @@ egov-mdms-service:
 
 
   mdms-v2:
-    memory_limits: "512Mi"
+    memory_limits: "1Gi"
   
 egov-indexer:
   heap: "-Xmx512m -Xms512m"
@@ -131,7 +131,7 @@ egov-indexer:
 egov-persister:
   replicas: 1
   heap: "-Xmx256m -Xms256m"
-  memory_limits: 512Mi
+  memory_limits: 1Gi
   images:
     - egovio/egov-persister
   persist-yml-path: "file:///work-dir/configs/egov-persister/mdms-persister.yml,file:///work-dir/configs/egov-persister/benefits-app-persistor.yml,file:///work-dir/configs/egov-persister/benefits-save-update-mappings.yml,file:///work-dir/configs/egov-persister/customer-create-update-persister.yml"

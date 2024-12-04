@@ -31,7 +31,7 @@ extraVolumeMounts: |
 image:
   repository: "gateway"
   tag: gateway-2.9.2-a916a090e6-40
-replicas: "1"
+replicas: "2"
 healthChecks:
   enabled: true
   livenessProbePath: "/health"
@@ -51,7 +51,7 @@ eventlog-enabled: "false"
 eventlog-topic: "springGateway-event-log"
 eventlog-urls-whitelist: ""
 home-isolation-chatbot-router-enabled: false
-memory_limits: "768Mi"
+memory_limits: "1Gi"
 
 # Additional Container Envs
 env: |

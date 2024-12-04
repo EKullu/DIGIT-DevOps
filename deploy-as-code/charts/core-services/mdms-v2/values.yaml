@@ -21,7 +21,7 @@ initContainers:
 image:
   repository: "egovio/mdms-v2"
   tag: MDMS-v2-2.9LTS-837232ac67-71
-replicas: "1"
+replicas: "3"
 healthChecks:
   enabled: true
   livenessProbePath: "/mdms-v2/health"
@@ -33,7 +33,7 @@ heap: "-Xmx512m -Xms512m"
 java-args: "-Dspring.profiles.active=monitoring"
 egov-mdms-schema-definition-save-topic: "save-mdms-schema-definition"
 egov-mdms-data-save-topic: "save-mdms-data"
-memory_limits: "512Mi"
+memory_limits: "1Gi"
 cpu_limits: "200m"
 
 # Additional Container Envs

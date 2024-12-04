@@ -14,7 +14,7 @@ initContainers:
 image:
   repository: "egov-persister"
   tag: DIGIT-2.9-LTS-07f47790b8-8
-replicas: "1"
+replicas: "3"
 healthChecks:
   enabled: true
   livenessProbePath: "/common-persist/health"
@@ -23,7 +23,7 @@ appType: "java-spring"
 tracing-enabled: true
 persist-yml-path: "file:///work-dir/configs/egov-persister/mdms-persister.yml,file:///work-dir/configs/egov-persister/benefits-app-persistor.yml,file:///work-dir/configs/egov-persister/benefits-save-update-mappings.yml,file:///work-dir/configs/egov-persister/customer-create-update-persister.yml"
 heap: "-Xmx192m -Xms192m"
-memory_limits: 512Mi
+memory_limits: 1Gi
 java-args: ""
 
 # Additional Container Envs

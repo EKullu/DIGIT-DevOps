@@ -6,9 +6,9 @@ configmaps:
       # db-host: "postgresql.backbone:5432" ## Add db-host name eg: egov-demo.database.azure.com
       # db-name: "postgres" ## Add db-name
       # db-url: "jdbc:postgresql://postgresql.backbone:5432/postgres" ## example: jdbc:postgresql://egov-demo.postgres.database.azure.com:5432/egov_demo
-      db-host: uat-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
-      db-name: uatpiramaldb ## Add db-name
-      db-url: "jdbc:postgresql://uat-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/uatpiramaldb"
+      db-host: uat-piramal-db-new.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
+      db-name: piramalstagingdb ## Add db-name
+      db-url: "jdbc:postgresql://uat-piramal-db-new.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/piramalstagingdb"
       domain: "stagingpiramal.tekdinext.com" ## Add your Domain Name
       egov-services-fqdn-name: "https://stagingpiramal.tekdinext.com/" ## Add your Domain Name
       flywayUsername: stagingpiramal

@@ -39,24 +39,3 @@ releases:
 
 
 
-# repositories:
-# - name: bitnami
-#   url: https://charts.bitnami.com/bitnami
-
-# templates: 
-#   default: &default
-#     namespace: egov
-#     missingFileHandler: Warn
-
-# values:
-#   - ../environments/env-secrets.yaml
-#   - ../environments/env.yaml
-  
-# releases:
-# - name: application
-#   chart: ./backend/application
-#   namespace: egov
-#   installed: true
-#   version: 0.1.0
-
-

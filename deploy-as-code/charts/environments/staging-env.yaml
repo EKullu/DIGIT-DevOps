@@ -5,9 +5,9 @@ root-ingress:
 configmaps:
   egov-config:
     data:
-      db-host: staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
-      db-name: piramalstagingdb ## Add db-name
-      db-url: "jdbc:postgresql://staging-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/piramalstagingdb"
+      db-host: uat-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com ## Add db-host name eg: egov-demo.database.azure.com
+      db-name: uatpiramaldb ## Add db-name
+      db-url: "jdbc:postgresql://uat-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com/uatpiramaldb"
       es-host: "elasticsearch-data.backbone"
       es-indexer-host: "https://elasticsearch-data.backbone:9200/"
       kafka-brokers: "kafka-kraft-controller-headless.backbone:9092"

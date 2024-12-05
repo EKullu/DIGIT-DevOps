@@ -27,8 +27,8 @@ group: {{ .Values.labels.group }}
 
 {{- define "common.image" -}}
 {{- if contains "/" .repository -}}      
-{{- printf "%s:%s" .repository  ( required "Tag is mandatory" .Values.image.tag ) -}}
+{{- printf "%s:%s" .repository  ( required "Tag is mandatory" .image.tag ) -}}
 {{- else -}}
-{{- printf "%s/%s:%s" $.Values.global.containerRegistry .repository ( required "Tag is mandatory" .Values.image.tag ) -}}
+{{- printf "%s/%s:%s" $.Values.global.containerRegistry .repository ( required "Tag is mandatory" .image.tag ) -}}
 {{- end -}}
 {{- end }}

@@ -17,11 +17,9 @@ initContainers: {}
 
 # Container Configs
 image:
-  repository: "prsm323/ubacronjob"  # Your Docker image repository
-  tag: latest  # Ensure this matches your built Docker image tag
+  repository: "prsm323/ubacronjob"  
+  tag: dev 
 replicas: "1"
-healthChecks:
-  enabled: false  # Not needed for cron jobs
 memory_limits: 384Mi
 
 # CronJob Schedule Configuration

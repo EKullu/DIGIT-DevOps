@@ -23,7 +23,7 @@ initContainers:
 # Container Configs
 image:
   repository: "prsm323/customer"
-  tag: latest2
+  tag: "{{ .Values.image.tag }}"
 replicas: "1"
 healthChecks:
   enabled: true

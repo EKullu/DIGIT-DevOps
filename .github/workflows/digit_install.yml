@@ -1,9 +1,9 @@
-name: DIGIT-Install workflow
+name: UAT-DIGIT-Install workflow
 # Workflow branch creating cluster against the input.yaml file  
 on:
   push:
     branches:
-      - staging-env--piramal
+      - uat-env-piramal
   workflow_dispatch:
     inputs:
       destroyCommand:

@@ -18,23 +18,9 @@ initContainers: {}
 # Container Configs
 image:
   repository: "prsm323/ubacronjob"  
-  tag: dev 
+  tag: dev
 replicas: "1"
 memory_limits: 384Mi
-
-# CronJob Schedule Configuration
-cronjob:
-  enabled: true
-  schedule: "*/10 * * * *"  # This will run the cron job every 10 minutes
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-            - name: uba-cronjob
-              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  # Image from values.yaml
-              env: []
-          restartPolicy: OnFailure  # The job will be retried if it fails
 
 # Additional Container Envs (if needed)
 env: []

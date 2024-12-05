@@ -1,7 +1,7 @@
 # Replace with the name which you want to give to your EKS cluster
 # Cluster name can have only lowercase alphanumeric characters and hyphens
 # For example: "digit-demos"
-cluster_name: "staging-piramal"
+cluster_name: "uat-piramal"
 
 # Replace with ssh key name you want
 ssh_key_name: "piramal-ssh-key" 
@@ -11,7 +11,7 @@ public_ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoN3nouZLx3PVMu1TKPYu18AA
 
 # Name you want to give to your Database
 # DB name must contain only alphanumeric characters
-db_name: "piramalstagingdb"
+db_name: "uatpiramaldb"
 
 # Replace with DB username you want
 # DB user name must contain only alphanumeric characters
@@ -21,5 +21,5 @@ db_username: "stagingpiramal"
 domain_name: "stagingpiramal.tekdinext.com"
 
 # Replace with the name you want to give to your S3 bucket which is used to store the terraform state
-terraform_state_bucket_name: "staging-piramal-s3-bucket"
+terraform_state_bucket_name: "uat-piramal-s3-bucket"
 

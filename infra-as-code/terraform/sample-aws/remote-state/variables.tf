@@ -1,3 +1,3 @@
 variable "bucket_name" {
-  default = "staging-piramal-s3-bucket"
+  default = "uat-piramal-s3-bucket"
 }

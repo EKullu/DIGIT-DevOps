@@ -1,6 +1,6 @@
 
 name: elasticsearch-data
-replicas: 5
+replicas: 3
 
 image:
   pullPolicy: IfNotPresent  

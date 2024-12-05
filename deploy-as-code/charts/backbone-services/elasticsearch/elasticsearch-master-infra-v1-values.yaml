@@ -1,6 +1,6 @@
 
 name: elasticsearch-master-infra-v1
-replicas: 4
+replicas: 2
 
 image:
   pullPolicy: IfNotPresent  
@@ -106,7 +106,7 @@ volumeClaimTemplate:
   accessModes: [ "ReadWriteOnce" ]
   resources:
     requests:
-      storage: 2Gi
+      storage: 20Gi
   storageClassName: gp2
 
 rbac:

@@ -17,10 +17,18 @@ group: {{ .Values.labels.group }}
 {{- end }}    
 {{- end }}
 
+// {{- define "common.image" -}}
+// {{- if contains "/" .repository -}}      
+// {{- printf "%s:%s" .repository  ( required "Tag is mandatory" .tag ) -}}
+// {{- else -}}
+// {{- printf "%s/%s:%s" $.Values.global.containerRegistry .repository ( required "Tag is mandatory" .tag ) -}}
+// {{- end -}}
+// {{- end -}}
+
 {{- define "common.image" -}}
 {{- if contains "/" .repository -}}      
-{{- printf "%s:%s" .repository  ( required "Tag is mandatory" .tag ) -}}
+{{- printf "%s:%s" .repository  ( required "Tag is mandatory" .Values.image.tag ) -}}
 {{- else -}}
-{{- printf "%s/%s:%s" $.Values.global.containerRegistry .repository ( required "Tag is mandatory" .tag ) -}}
+{{- printf "%s/%s:%s" $.Values.global.containerRegistry .repository ( required "Tag is mandatory" .Values.image.tag ) -}}
 {{- end -}}
-{{- end -}}
+{{- end }}

@@ -6,6 +6,7 @@ labels:
 namespace: egov
 
 # Ingress Configs
+
 ingress:
   enabled: true
   zuul: true
@@ -23,7 +24,7 @@ initContainers:
 # Container Configs
 image:
   repository: "prsm323/application"
-  tag: v1.0.0-20241205-105219
+  tag: v1.0.0-20241206-042801
 replicas: "4"
 healthChecks:
   enabled: true

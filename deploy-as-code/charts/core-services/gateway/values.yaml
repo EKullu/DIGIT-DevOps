@@ -51,7 +51,7 @@ eventlog-enabled: "false"
 eventlog-topic: "springGateway-event-log"
 eventlog-urls-whitelist: ""
 home-isolation-chatbot-router-enabled: false
-memory_limits: "1Gi"
+memory_limits: "768Mi"
 
 # Additional Container Envs
 env: |

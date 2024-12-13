@@ -4,3 +4,6 @@ creation_rules:
   # eGOV Internal ------------------------------------------------------------------------------------------------------------- #
   - path_regex: charts/environments/env\-secrets\.yaml$
     kms: 'arn:aws:kms:ap-south-1:680148267093:key/b7cf18c6-4396-4aff-b391-783c8605180a'
+
+  -path_regex: charts/environments/env\-secrets\.yaml$
+    kms: 'arn:aws:kms:ap-south-1:746669230257:key/1414898f-f3df-4946-941c-b89555208ee4'

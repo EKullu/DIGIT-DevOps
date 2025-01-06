@@ -46,4 +46,3 @@ openssl rsa -pubout -in private_key.pem -out public_key.pem
 7. Finalize Installation
 After entering all the details, push these changes to the remote GitHub repository.
 Open the Actions tab in your GitHub account to view the workflow. You should see that the workflow has started, and the pipelines are completing successfully.
-

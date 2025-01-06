@@ -23,7 +23,7 @@ httpPort: 8080
 serverBasePath: "/pgadmin"
 dbUrl: "dev-piramal-db.cnmaw2uc6xfw.ap-south-1.rds.amazonaws.com"
 environment: "DEV"
-maintenance-db-name: "postgres"           
+maintenance-db-name: "piramaldevdb"           
 
 # Additional Container Envs
 env: |  

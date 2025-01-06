@@ -31,7 +31,7 @@ extraVolumeMounts: |
 image:
   repository: "gateway"
   tag: gateway-2.9.2-a916a090e6-40
-replicas: "2"
+replicas: "1"
 healthChecks:
   enabled: true
   livenessProbePath: "/health"

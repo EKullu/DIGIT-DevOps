@@ -21,7 +21,7 @@ initContainers:
 image:
   repository: "egovio/mdms-v2"
   tag: MDMS-v2-2.9LTS-837232ac67-71
-replicas: "3"
+replicas: "1"
 healthChecks:
   enabled: true
   livenessProbePath: "/mdms-v2/health"

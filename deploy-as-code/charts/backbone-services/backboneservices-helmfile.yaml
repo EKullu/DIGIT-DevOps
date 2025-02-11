@@ -8,7 +8,7 @@ templates:
     missingFileHandler: Warn
 
 values:
-  - ../environments/env-secrets.yaml
+  - ../environments/dev-env-secrets.yaml
   - ../environments/env.yaml
 
 releases:

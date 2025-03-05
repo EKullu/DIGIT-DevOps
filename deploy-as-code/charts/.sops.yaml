@@ -7,3 +7,8 @@ creation_rules:
 
   -path_regex: charts/environments/env\-secrets\.yaml$
     kms: 'arn:aws:kms:ap-south-1:746669230257:key/1414898f-f3df-4946-941c-b89555208ee4'
+#Piramal
+  - path_regex: charts/environments/dev-env-secrets.yaml$
+    kms:
+      - "arn:aws:kms:ap-south-1:490004615495:key/407cb6b3-30b3-48a8-beaa-de30c4ea2f71"
+
